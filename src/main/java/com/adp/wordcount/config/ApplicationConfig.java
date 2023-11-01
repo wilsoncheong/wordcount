@@ -12,6 +12,13 @@ import lombok.extern.slf4j.Slf4j;
 @Setter
 @Configuration
 @ConfigurationProperties(prefix = "application")
+/**
+* Application Config
+*
+* @author  Wilson Cheong
+* @version 1.0
+* @since   2023-11-01
+*/
 public class ApplicationConfig {
     
     private String processFolder;

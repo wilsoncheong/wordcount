@@ -1,5 +1,7 @@
 package com.adp.wordcount;
 
+import java.lang.annotation.Documented;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -13,6 +15,15 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @SpringBootApplication
 @ComponentScan(basePackages = "com.adp.wordcount")
+
+/**
+* Wordcount Application
+* This is to calculate the number of occurrences of word in the file.
+*
+* @author  Wilson Cheong
+* @version 1.0
+* @since   2023-11-01
+*/
 public class WordCountApplication implements CommandLineRunner {
 
     @Autowired

@@ -7,13 +7,28 @@ import java.nio.file.Paths;
 import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 
+/**
+* Ms Word File Processor
+* This is File Processor for Ms Word file
+*
+* @author  Wilson Cheong
+* @version 1.0
+* @since   2023-11-01
+*/
 public class MsWordFileProcessor extends FileProcessor {
     
+    /**
+     * Constructor for MsWordFileProcessor
+     * @param filename Filename to process
+     */
     public MsWordFileProcessor(String filename) {
         super(filename);
     }
 
     @Override
+    /**
+     * This is to read doc file content
+     */
     public void readFileContent() throws IOException {
 
         try (XWPFDocument doc = new XWPFDocument(

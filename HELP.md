@@ -33,3 +33,12 @@ Go to the wordcount\target folder and run the application
     $ java -jar -Dspring.profiles.active=dev -Djava.io.tmpdir=C:\\tmp -Dwordcount.filename=C:\\tmp\\test.txt wordcount-dev.jar
 
     $ java -jar -Dspring.profiles.active=dev -Djava.io.tmpdir=C:\\tmp -Dwordcount.filename=C:\\tmp\\test.docx wordcount-dev.jar
+
+
+# To Run test
+
+    $ mvn test
+
+# To Generate JavaDoc
+
+    $ mvn javadoc:javadoc

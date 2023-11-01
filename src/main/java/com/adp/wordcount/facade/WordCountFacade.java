@@ -14,11 +14,25 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Component
+/**
+* WordCount Facade
+* This class is act as controller to WordCount console application
+*
+* @author  Wilson Cheong
+* @version 1.0
+* @since   2023-11-01
+*/
 public class WordCountFacade {
 
     @Autowired
     private WordCountService wordCountService;
  
+    /**
+     * This is the method to initial the process wordcount
+     * 
+     * @param filename This is filename required to process
+     * @throws IOException
+     */
     public void processWordCount(String filename) throws IOException {
         log.info("Start Process Count - " + filename);
         String fileFormat = FilenameUtils.getExtension(filename);
