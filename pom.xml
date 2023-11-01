@@ -162,9 +162,9 @@
 							 <goals>
 								 <goal>report</goal>
 							 </goals>
-							 <configuration>
+							 <!--configuration>
 								<outputDirectory>archive/jacoco-report</outputDirectory>
-							</configuration>
+							</configuration-->
 					  </execution>
 					  <execution>
 							<id>jacoco-check</id>
