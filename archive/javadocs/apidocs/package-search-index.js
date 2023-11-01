@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.adp.wordcount"},{"l":"com.adp.wordcount.config"},{"l":"com.adp.wordcount.constant"},{"l":"com.adp.wordcount.facade"},{"l":"com.adp.wordcount.factory"},{"l":"com.adp.wordcount.models"},{"l":"com.adp.wordcount.processors"},{"l":"com.adp.wordcount.services"}];updateSearchResults();
