@@ -1,4 +1,4 @@
-package com.adp.wordcount;
+package com.adp.wordcount.unittest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
@@ -21,7 +21,7 @@ import com.adp.wordcount.services.WordCountServiceImpl;
 
 @SpringBootTest
 @ActiveProfiles("dev")
-class WordCountApplicationTests {
+class WordCountUnitTests {
 
 	WordCountService wordCountService;
 

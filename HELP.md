@@ -39,6 +39,10 @@ Go to the wordcount\target folder and run the application
 
     $ mvn test
 
+    $ mvn -Dtest=com.adp.wordcount.unittest.** test
+
+    $ mvn -Dtest=com.adp.wordcount.integrationtest.** test
+
 # To Check Coverage
 
     $ mvn clean verify
