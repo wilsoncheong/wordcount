@@ -28,75 +28,75 @@ class WordCountUnitTests {
 	@Mock
 	FileProcessor fileProcessor;
 
-    @Test
+	@Test
 	void testWordCountResult() throws IOException {
 
 		System.out.println("Start Wordcount");
- 
-        WordCountService wordCountSvc = new WordCountServiceImpl();
+
+		WordCountService wordCountSvc = new WordCountServiceImpl();
 
 		int expected = 3;
 		String content = "a b a b c a";
 
 		WordCountResult result = wordCountSvc.countWordsInContent(content);
 		Map<String, Integer> wordCounts = result.getWordCounts();
-		
+
 		assertEquals(expected, wordCounts.get("a"));
 	}
 
-    @Test
+	@Test
 	void testWordCountAscendingOrder() throws IOException {
 
 		System.out.println("Start testWordCountAscendingOrder");
- 
-        WordCountService wordCountSvc = new WordCountServiceImpl();
+
+		WordCountService wordCountSvc = new WordCountServiceImpl();
 
 		String expected = "c";
 		String content = "a b a b c a";
 
 		WordCountResult result = wordCountSvc.countWordsInContent(content);
 		Map<String, Integer> wordCounts = wordCountSvc.sortByWordCountAscending(result);
-		
+
 		assertEquals(expected, wordCounts.entrySet().stream().findFirst().get().getKey());
 	}
 
-    @Test
+	@Test
 	void testWordCountDescendingOrder() throws IOException {
 
 		System.out.println("Start testWordCountDescendingOrder");
- 
-        WordCountService wordCountSvc = new WordCountServiceImpl();
+
+		WordCountService wordCountSvc = new WordCountServiceImpl();
 
 		String expected = "a";
 		String content = "a b a b c a";
 
 		WordCountResult result = wordCountSvc.countWordsInContent(content);
 		Map<String, Integer> wordCounts = wordCountSvc.sortByWordCountDescending(result);
-		
+
 		assertEquals(expected, wordCounts.entrySet().stream().findFirst().get().getKey());
 	}
 
 	@Test
 	void testTxtFileProcessor() throws IOException {
 
-        fileProcessor = Mockito.mock(TextFileProcessor.class);
+		fileProcessor = Mockito.mock(TextFileProcessor.class);
 		String content = "a b a b c a";
 		when(fileProcessor.readFileContent()).thenReturn(content);
-		
+
 		String expected = fileProcessor.readFileContent();
-		
+
 		assertEquals(expected, content);
 	}
 
 	@Test
 	void testMsDocFileProcessor() throws IOException {
 
-        fileProcessor = Mockito.mock(MsWordFileProcessor.class);
+		fileProcessor = Mockito.mock(MsWordFileProcessor.class);
 		String content = "a b a b c a";
 		when(fileProcessor.readFileContent()).thenReturn(content);
-		
+
 		String expected = fileProcessor.readFileContent();
-		
+
 		assertEquals(expected, content);
 	}
 }
