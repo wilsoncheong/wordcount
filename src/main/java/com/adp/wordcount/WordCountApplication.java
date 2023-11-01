@@ -36,10 +36,14 @@ public class WordCountApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         log.info("Application Started !!");
+        
         String filename = System.getProperty("wordcount.filename");
         log.info("Start Process " + filename);
 
-        wordCountFacade.processWordCount(filename);
+        if (filename != null) {
+            wordCountFacade.processWordCount(filename);
+        }
+        
         log.info("Application End !!");
     }
 

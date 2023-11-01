@@ -29,7 +29,7 @@ public class MsWordFileProcessor extends FileProcessor {
     /**
      * This is to read doc file content
      */
-    public void readFileContent() throws IOException {
+    public String readFileContent() throws IOException {
 
         try (XWPFDocument doc = new XWPFDocument(
                 Files.newInputStream(Paths.get(this.filename)))) {
@@ -37,8 +37,8 @@ public class MsWordFileProcessor extends FileProcessor {
             XWPFWordExtractor xwpfWordExtractor = new XWPFWordExtractor(doc);
             String content = xwpfWordExtractor.getText();
            
-            this.content = content;
             xwpfWordExtractor.close();
+            return content;
         }
 
     }

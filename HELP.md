@@ -39,6 +39,10 @@ Go to the wordcount\target folder and run the application
 
     $ mvn test
 
+# To Check Coverage
+
+    $ mvn clean verify
+
 # To Generate JavaDoc
 
     $ mvn javadoc:javadoc
